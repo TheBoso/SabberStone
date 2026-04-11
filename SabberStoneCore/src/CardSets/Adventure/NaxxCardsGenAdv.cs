@@ -12,8 +12,12 @@
 // GNU Affero General Public License for more details.
 #endregion
 using System.Collections.Generic;
+using SabberStoneCore.Conditions;
 using SabberStoneCore.Enchants;
 using SabberStoneCore.Enums;
+using SabberStoneCore.Model.Entities;
+using SabberStoneCore.Tasks;
+using SabberStoneCore.Tasks.SimpleTasks;
 using SabberStoneCore.src.Loader;
 // ReSharper disable RedundantEmptyObjectOrCollectionInitializer
 
@@ -503,9 +507,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX10_03", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0},{PlayReq.REQ_MINION_TARGET,0}}, new Power
 			{
-				// TODO [NAX10_03] Hateful Strike && Test: Hateful Strike_NAX10_03
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DestroyTask(EntityType.TARGET)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -524,9 +526,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX10_03H", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0},{PlayReq.REQ_MINION_TARGET,0}}, new Power
 			{
-				// TODO [NAX10_03H] Hateful Strike && Test: Hateful Strike_NAX10_03H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DestroyTask(EntityType.TARGET)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -541,9 +541,13 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX11_02", new CardDef(new Power
 			{
-				// TODO [NAX11_02] Poison Cloud && Test: Poison Cloud_NAX11_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DamageTask(1, EntityType.ALLMINIONS),
+					new IncludeTask(EntityType.ALLMINIONS),
+					new FilterStackTask(SelfCondition.IsDead),
+					new CountTask(EntityType.STACK),
+					new NumberConditionTask(1, RelaSign.GEQ),
+					new FlagTask(true, new SummonTask("NAX11_03")))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -559,9 +563,13 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX11_02H", new CardDef(new Power
 			{
-				// TODO [NAX11_02H] Poison Cloud && Test: Poison Cloud_NAX11_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DamageTask(2, EntityType.ENEMIES),
+					new IncludeTask(EntityType.ALLMINIONS),
+					new FilterStackTask(SelfCondition.IsDead),
+					new CountTask(EntityType.STACK),
+					new NumberConditionTask(1, RelaSign.GEQ),
+					new FlagTask(true, new SummonTask("NAX11_03")))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -579,10 +587,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX12_02", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_MINIMUM_ENEMY_MINIONS,1}}, new Power
 			{
-				// TODO [NAX12_02] Decimate && Test: Decimate_NAX12_02
 				InfoCardId = "NAX12_02e",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("NAX12_02e", EntityType.ALLMINIONS)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -601,9 +607,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX12_02H", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_MINIMUM_ENEMY_MINIONS,1}}, new Power
 			{
-				// TODO [NAX12_02H] Decimate && Test: Decimate_NAX12_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("NAX12_02e", EntityType.OP_MINIONS)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -657,9 +661,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX15_02", new CardDef(new Power
 			{
-				// TODO [NAX15_02] Frost Blast && Test: Frost Blast_NAX15_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DamageTask(2, EntityType.OP_HERO),
+					ComplexTask.Freeze(EntityType.OP_HERO))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -676,9 +680,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX15_02H", new CardDef(new Power
 			{
-				// TODO [NAX15_02H] Frost Blast && Test: Frost Blast_NAX15_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DamageTask(3, EntityType.OP_HERO),
+					ComplexTask.Freeze(EntityType.OP_HERO))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -731,9 +735,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX1_04", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_NUM_MINION_SLOTS,1}}, new Power
 			{
-				// TODO [NAX1_04] Skitter && Test: Skitter_NAX1_04
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new SummonTask("NAX1_03")
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -748,9 +750,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX1h_04", new CardDef(new Power
 			{
-				// TODO [NAX1h_04] Skitter && Test: Skitter_NAX1h_04
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new SummonTask("NAX1h_03")
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -804,9 +804,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX3_02", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_MINIMUM_ENEMY_MINIONS,1}}, new Power
 			{
-				// TODO [NAX3_02] Web Wrap && Test: Web Wrap_NAX3_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new RandomTask(1, EntityType.OP_MINIONS),
+					new ReturnHandTask(EntityType.STACK))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -822,9 +822,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX3_02H", new CardDef(new Power
 			{
-				// TODO [NAX3_02H] Web Wrap && Test: Web Wrap_NAX3_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new RandomTask(2, EntityType.OP_MINIONS),
+					new ReturnHandTask(EntityType.STACK))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -876,9 +876,15 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX5_02", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_MINIMUM_ENEMY_MINIONS,1}}, new Power
 			{
-				// TODO [NAX5_02] Eruption && Test: Eruption_NAX5_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new IncludeTask(EntityType.SOURCE),
+					new FuncPlayablesTask(p =>
+					{
+						if (p[0].Controller.Opponent.BoardZone.Count == 0)
+							return new List<IPlayable>();
+						return new List<IPlayable> { p[0].Controller.Opponent.BoardZone[0] };
+					}),
+					new DamageTask(2, EntityType.STACK))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -897,9 +903,15 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX5_02H", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_MINIMUM_ENEMY_MINIONS,0}}, new Power
 			{
-				// TODO [NAX5_02H] Eruption && Test: Eruption_NAX5_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new IncludeTask(EntityType.SOURCE),
+					new FuncPlayablesTask(p =>
+					{
+						if (p[0].Controller.Opponent.BoardZone.Count == 0)
+							return new List<IPlayable>();
+						return new List<IPlayable> { p[0].Controller.Opponent.BoardZone[0] };
+					}),
+					new DamageTask(3, EntityType.STACK))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -914,9 +926,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX6_02", new CardDef(new Power
 			{
-				// TODO [NAX6_02] Necrotic Aura && Test: Necrotic Aura_NAX6_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DamageTask(3, EntityType.OP_HERO)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -931,9 +941,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX6_02H", new CardDef(new Power
 			{
-				// TODO [NAX6_02H] Necrotic Aura && Test: Necrotic Aura_NAX6_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DamageTask(3, EntityType.OP_HERO)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -951,9 +959,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX7_03", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0}}, new Power
 			{
-				// TODO [NAX7_03] Unbalancing Strike && Test: Unbalancing Strike_NAX7_03
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DamageTask(3, EntityType.TARGET)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -971,9 +977,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX7_03H", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0}}, new Power
 			{
-				// TODO [NAX7_03H] Unbalancing Strike && Test: Unbalancing Strike_NAX7_03H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DamageTask(4, EntityType.TARGET)
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -988,9 +992,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX8_02", new CardDef(new Power
 			{
-				// TODO [NAX8_02] Harvest && Test: Harvest_NAX8_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DrawTask()
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -1006,9 +1008,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX8_02H", new CardDef(new Power
 			{
-				// TODO [NAX8_02H] Harvest && Test: Harvest_NAX8_02H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DrawTask(),
+					new ManaCrystalEmptyTask(1))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -1023,9 +1025,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX9_06", new CardDef(new Power
 			{
-				// TODO [NAX9_06] Unholy Shadow && Test: Unholy Shadow_NAX9_06
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DrawTask(2)
 			}));
 
 		}
@@ -1061,8 +1061,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX12_02e", new CardDef(new Power
 			{
-				// TODO [NAX12_02e] Decimate && Test: Decimate_NAX12_02e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX12_02e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX12_02e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -1076,8 +1075,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX12_03e", new CardDef(new Power
 			{
-				// TODO [NAX12_03e] Extra Teeth && Test: Extra Teeth_NAX12_03e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX12_03e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX12_03e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -1092,8 +1090,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX12_04e", new CardDef(new Power
 			{
-				// TODO [NAX12_04e] Enrage && Test: Enrage_NAX12_04e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX12_04e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX12_04e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -1107,8 +1104,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX13_02e", new CardDef(new Power
 			{
-				// TODO [NAX13_02e] Polarity && Test: Polarity_NAX13_02e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX13_02e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX13_02e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -1122,8 +1118,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX13_03e", new CardDef(new Power
 			{
-				// TODO [NAX13_03e] Supercharged && Test: Supercharged_NAX13_03e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX13_03e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX13_03e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -1743,10 +1738,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX11_04", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0},{PlayReq.REQ_MINION_TARGET,0}}, new Power
 			{
-				// TODO [NAX11_04] Mutating Injection && Test: Mutating Injection_NAX11_04
 				InfoCardId = "NAX11_04e",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("NAX11_04e", EntityType.TARGET)
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -1760,10 +1753,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX12_04", new CardDef(new Power
 			{
-				// TODO [NAX12_04] Enrage && Test: Enrage_NAX12_04
 				InfoCardId = "NAX12_04e",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("NAX12_04e", EntityType.HERO)
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -1777,10 +1768,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX13_03", new CardDef(new Power
 			{
-				// TODO [NAX13_03] Supercharge && Test: Supercharge_NAX13_03
 				InfoCardId = "NAX13_03e",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("NAX13_03e", EntityType.MINIONS)
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -1795,9 +1784,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX14_04", new CardDef(new Power
 			{
-				// TODO [NAX14_04] Pure Cold && Test: Pure Cold_NAX14_04
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DamageTask(8, EntityType.OP_HERO, true),
+					ComplexTask.Freeze(EntityType.OP_HERO))
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -1811,9 +1800,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX1_05", new CardDef(new Power
 			{
-				// TODO [NAX1_05] Locust Swarm && Test: Locust Swarm_NAX1_05
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new DamageTask(3, EntityType.OP_MINIONS, true),
+					new HealTask(3, EntityType.HERO))
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -1831,9 +1820,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX3_03", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0},{PlayReq.REQ_MINION_TARGET,0}}, new Power
 			{
-				// TODO [NAX3_03] Necrotic Poison && Test: Necrotic Poison_NAX3_03
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DestroyTask(EntityType.TARGET)
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
