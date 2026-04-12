@@ -304,6 +304,9 @@ namespace SabberStoneCore.Model.Entities
 			HeroId = Hero.Id;
 			Hero.HeroPower = FromCard(this, powerCard ?? Cards.FromAssetId(Hero[GameTag.HERO_POWER]),
 				new EntityData { [GameTag.CREATOR] = Hero.Id }) as HeroPower;
+			// Passive hero powers (e.g. Noth's Raise Dead) need their trigger/aura active from game start.
+			Hero.HeroPower?.Power?.Aura?.Activate(Hero.HeroPower);
+			Hero.HeroPower?.Power?.Trigger?.Activate(Hero.HeroPower);
 			Hero.Weapon = weapon;
 			Hero.AuraEffects = auraEffects;
 		}
