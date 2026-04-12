@@ -87,12 +87,13 @@ namespace SabberStoneCore.src.Loader
 			// * ADV SET!!!
 			// ****************************************
 			// Adventure
-			//BrmCardsGenAdv.AddAll(_powerDic);
-			//NaxxCardsGenAdv.AddAll(_powerDic);
-			//LoeCardsGenAdv.AddAll(_powerDic);
+			BrmCardsGenAdv.AddAll(_cardDefsDic);
+			NaxxCardsGenAdv.AddAll(_cardDefsDic);
+			LoeCardsGenAdv.AddAll(_cardDefsDic);
 			//KaraCardsGenAdv.AddAll(_powerDic);
 			//IcecrownCardsGenAdv.AddAll(_powerDic);
 			//LootapaloozaCardsGenAdv.AddAll(_cardDefsDic);
+
 		}
 
 		/// <summary>
@@ -101,7 +102,7 @@ namespace SabberStoneCore.src.Loader
 		public static CardDefs Instance => _instance ?? (_instance = new CardDefs());
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <returns></returns>
 		public IReadOnlyDictionary<string, CardDef> Get => _cardDefsDic;
