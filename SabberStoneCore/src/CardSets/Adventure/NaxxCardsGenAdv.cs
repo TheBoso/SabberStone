@@ -18,6 +18,7 @@ using SabberStoneCore.Enums;
 using SabberStoneCore.Model.Entities;
 using SabberStoneCore.Tasks;
 using SabberStoneCore.Tasks.SimpleTasks;
+using SabberStoneCore.Triggers;
 using SabberStoneCore.src.Loader;
 // ReSharper disable RedundantEmptyObjectOrCollectionInitializer
 
@@ -839,9 +840,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX4_04", new CardDef(new Power
 			{
-				// TODO [NAX4_04] Raise Dead && Test: Raise Dead_NAX4_04
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.DEATH)
+				{
+					TriggerSource = TriggerSource.ENEMY,
+					Condition = SelfCondition.IsMinion,
+					SingleTask = new SummonTask("NAX4_03")
+				}
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -856,9 +860,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX4_04H", new CardDef(new Power
 			{
-				// TODO [NAX4_04H] Raise Dead && Test: Raise Dead_NAX4_04H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.DEATH)
+				{
+					TriggerSource = TriggerSource.ENEMY,
+					Condition = SelfCondition.IsMinion,
+					SingleTask = new SummonTask("NAX4_03H")
+				}
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
