@@ -95,6 +95,7 @@ namespace SabberStoneCore.Kettle
 		private static List<GameTag> gameTagsEntities = new List<GameTag>()
 		{
 			GameTag.PREMIUM,
+			GameTag.TRIGGER_VISUAL,
 			GameTag.ATK,
 			GameTag.HEALTH,
 			GameTag.DURABILITY,
