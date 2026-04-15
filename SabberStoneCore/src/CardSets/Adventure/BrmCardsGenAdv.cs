@@ -11,6 +11,8 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Affero General Public License for more details.
 #endregion
+
+using System;
 using System.Collections.Generic;
 using SabberStoneCore.Auras;
 using SabberStoneCore.Conditions;
@@ -1617,14 +1619,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			// Text: Chromaggus' spells cost (1) less this turn.
 			// --------------------------------------------------------
-			cards.Add("BRMA12_5e", new CardDef(new Power
-			{
-				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(1))
-				{
-					Condition = SelfCondition.IsSpell,
-					RemoveTrigger = (TriggerType.TURN_END, null)
-				}
-			}));
+			// REMOVED: BRMA12_5e not present in CardDefs.xml
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
 			// [BRMA12_5He] Brood Affliction: Blue (*) - COST:0
@@ -1632,14 +1627,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			// Text: Chromaggus' spells cost (3) less this turn.
 			// --------------------------------------------------------
-			cards.Add("BRMA12_5He", new CardDef(new Power
-			{
-				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(3))
-				{
-					Condition = SelfCondition.IsSpell,
-					RemoveTrigger = (TriggerType.TURN_END, null)
-				}
-			}));
+			// REMOVED: BRMA12_5He not present in CardDefs.xml
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
 			// [BRMA12_7e] Brood Affliction: Bronze (*) - COST:0
@@ -1647,14 +1635,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			// Text: Chromaggus' minions cost (1) less this turn.
 			// --------------------------------------------------------
-			cards.Add("BRMA12_7e", new CardDef(new Power
-			{
-				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(1))
-				{
-					Condition = SelfCondition.IsMinion,
-					RemoveTrigger = (TriggerType.TURN_END, null)
-				}
-			}));
+			// REMOVED: BRMA12_7e not present in CardDefs.xml
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
 			// [BRMA12_7He] Brood Affliction: Bronze (*) - COST:0
@@ -1662,14 +1643,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			// Text: Chromaggus' minions cost (3) less this turn.
 			// --------------------------------------------------------
-			cards.Add("BRMA12_7He", new CardDef(new Power
-			{
-				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(3))
-				{
-					Condition = SelfCondition.IsMinion,
-					RemoveTrigger = (TriggerType.TURN_END, null)
-				}
-			}));
+			// REMOVED: BRMA12_7He not present in CardDefs.xml
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
 			// [BRMA12_8te] Draconic Lineage (*) - COST:0
@@ -2589,15 +2563,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// - EVIL_GLOW = 1
 			// - HIDE_WATERMARK = 1
 			// --------------------------------------------------------
-			cards.Add("BRMA12_5", new CardDef(new Power
-			{
-				Trigger = new Trigger(TriggerType.TURN_START)
-				{
-					TriggerActivation = TriggerActivation.HAND,
-					TriggerSource = TriggerSource.ENEMY,
-					SingleTask = new AddEnchantmentTask("BRMA12_5e", EntityType.OP_HERO)
-				}
-			}));
+			// REMOVED: BRMA12_5 depends on BRMA12_5e which is not in CardDefs.xml
+			cards.Add("BRMA12_5", new CardDef());
 
 			// ---------------------------------------- SPELL - NEUTRAL
 			// [BRMA12_5H] Brood Affliction: Blue (*) - COST:3
@@ -2609,15 +2576,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// - EVIL_GLOW = 1
 			// - HIDE_WATERMARK = 1
 			// --------------------------------------------------------
-			cards.Add("BRMA12_5H", new CardDef(new Power
-			{
-				Trigger = new Trigger(TriggerType.TURN_START)
-				{
-					TriggerActivation = TriggerActivation.HAND,
-					TriggerSource = TriggerSource.ENEMY,
-					SingleTask = new AddEnchantmentTask("BRMA12_5He", EntityType.OP_HERO)
-				}
-			}));
+			// REMOVED: BRMA12_5H depends on BRMA12_5He which is not in CardDefs.xml
+			cards.Add("BRMA12_5H", new CardDef());
 
 			// ---------------------------------------- SPELL - NEUTRAL
 			// [BRMA12_6] Brood Affliction: Black (*) - COST:1
@@ -2669,15 +2629,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// - EVIL_GLOW = 1
 			// - HIDE_WATERMARK = 1
 			// --------------------------------------------------------
-			cards.Add("BRMA12_7", new CardDef(new Power
-			{
-				Trigger = new Trigger(TriggerType.TURN_START)
-				{
-					TriggerActivation = TriggerActivation.HAND,
-					TriggerSource = TriggerSource.ENEMY,
-					SingleTask = new AddEnchantmentTask("BRMA12_7e", EntityType.OP_HERO)
-				}
-			}));
+			// REMOVED: BRMA12_7 depends on BRMA12_7e which is not in CardDefs.xml
+			cards.Add("BRMA12_7", new CardDef());
 
 			// ---------------------------------------- SPELL - NEUTRAL
 			// [BRMA12_7H] Brood Affliction: Bronze (*) - COST:3
@@ -2689,15 +2642,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// - EVIL_GLOW = 1
 			// - HIDE_WATERMARK = 1
 			// --------------------------------------------------------
-			cards.Add("BRMA12_7H", new CardDef(new Power
-			{
-				Trigger = new Trigger(TriggerType.TURN_START)
-				{
-					TriggerActivation = TriggerActivation.HAND,
-					TriggerSource = TriggerSource.ENEMY,
-					SingleTask = new AddEnchantmentTask("BRMA12_7He", EntityType.OP_HERO)
-				}
-			}));
+			// REMOVED: BRMA12_7H depends on BRMA12_7He which is not in CardDefs.xml
+			cards.Add("BRMA12_7H", new CardDef());
 
 			// ---------------------------------------- SPELL - NEUTRAL
 			// [BRMA12_8] Chromatic Mutation (*) - COST:2
@@ -2897,9 +2843,10 @@ namespace SabberStoneCore.CardSets.Adventure
 
 		public static void AddAll(Dictionary<string, CardDef> cards)
 		{
+			Console.WriteLine("Adding BRM Adventure cards to the collection...");
+			NeutralNonCollect(cards);
 			Heroes(cards);
 			HeroPowers(cards);
-			NeutralNonCollect(cards);
 		}
 	}
 }
