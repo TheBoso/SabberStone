@@ -2130,9 +2130,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA10_5", new CardDef(new Power
 			{
-				// TODO [BRMA10_5] Chromatic Drake && Test: Chromatic Drake_BRMA10_5
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2144,9 +2141,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA10_5H", new CardDef(new Power
 			{
-				// TODO [BRMA10_5H] Chromatic Drake && Test: Chromatic Drake_BRMA10_5H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2198,9 +2192,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_6", new CardDef(new Power
 			{
-				// TODO [BRMA13_6] Living Lava && Test: Living Lava_BRMA13_6
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2215,9 +2206,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_7", new CardDef(new Power
 			{
-				// TODO [BRMA13_7] Whirling Ash && Test: Whirling Ash_BRMA13_7
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2233,9 +2221,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA14_12", new CardDef(new Power
 			{
-				// TODO [BRMA14_12] Magmaw && Test: Magmaw_BRMA14_12
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2392,9 +2377,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA15_4", new CardDef(new Power
 			{
-				// TODO [BRMA15_4] Aberration && Test: Aberration_BRMA15_4
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2406,9 +2388,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_6", new CardDef(new Power
 			{
-				// TODO [BRMA17_6] Bone Construct && Test: Bone Construct_BRMA17_6
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2420,9 +2399,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_6H", new CardDef(new Power
 			{
-				// TODO [BRMA17_6H] Bone Construct && Test: Bone Construct_BRMA17_6H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2437,9 +2413,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_7", new CardDef(new Power
 			{
-				// TODO [BRMA17_7] Chromatic Prototype && Test: Chromatic Prototype_BRMA17_7
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2978,9 +2951,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_9", new CardDef(new Power
 			{
-				// TODO [BRMA17_9] Onyxiclaw && Test: Onyxiclaw_BRMA17_9
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 		}
