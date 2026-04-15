@@ -1,4 +1,4 @@
-﻿#region copyright
+#region copyright
 // SabberStone, Hearthstone Simulator in C# .NET Core
 // Copyright (C) 2017-2019 SabberStone Team, darkfriend77 & rnilva
 //
@@ -52,9 +52,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA01_1", new CardDef(new Power
 			{
-				// TODO [BRMA01_1] Coren Direbrew && Test: Coren Direbrew_BRMA01_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -68,9 +65,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA01_1H", new CardDef(new Power
 			{
-				// TODO [BRMA01_1H] Coren Direbrew && Test: Coren Direbrew_BRMA01_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -83,9 +77,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA02_1", new CardDef(new Power
 			{
-				// TODO [BRMA02_1] High Justice Grimstone && Test: High Justice Grimstone_BRMA02_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -98,9 +89,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA02_1H", new CardDef(new Power
 			{
-				// TODO [BRMA02_1H] High Justice Grimstone && Test: High Justice Grimstone_BRMA02_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -113,9 +101,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA03_1", new CardDef(new Power
 			{
-				// TODO [BRMA03_1] Emperor Thaurissan && Test: Emperor Thaurissan_BRMA03_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -128,9 +113,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA03_1H", new CardDef(new Power
 			{
-				// TODO [BRMA03_1H] Emperor Thaurissan && Test: Emperor Thaurissan_BRMA03_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -143,9 +125,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA04_1", new CardDef(new Power
 			{
-				// TODO [BRMA04_1] Garr && Test: Garr_BRMA04_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -158,9 +137,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA04_1H", new CardDef(new Power
 			{
-				// TODO [BRMA04_1H] Garr && Test: Garr_BRMA04_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -173,9 +149,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA05_1", new CardDef(new Power
 			{
-				// TODO [BRMA05_1] Baron Geddon && Test: Baron Geddon_BRMA05_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -188,9 +161,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA05_1H", new CardDef(new Power
 			{
-				// TODO [BRMA05_1H] Baron Geddon && Test: Baron Geddon_BRMA05_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -203,9 +173,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA06_1", new CardDef(new Power
 			{
-				// TODO [BRMA06_1] Majordomo Executus && Test: Majordomo Executus_BRMA06_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -218,9 +185,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA06_1H", new CardDef(new Power
 			{
-				// TODO [BRMA06_1H] Majordomo Executus && Test: Majordomo Executus_BRMA06_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -233,9 +197,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA06_3", new CardDef(new Power
 			{
-				// TODO [BRMA06_3] Ragnaros the Firelord && Test: Ragnaros the Firelord_BRMA06_3
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -248,9 +209,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA06_3H", new CardDef(new Power
 			{
-				// TODO [BRMA06_3H] Ragnaros the Firelord && Test: Ragnaros the Firelord_BRMA06_3H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -263,9 +221,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA07_1", new CardDef(new Power
 			{
-				// TODO [BRMA07_1] Highlord Omokk && Test: Highlord Omokk_BRMA07_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -278,9 +233,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA07_1H", new CardDef(new Power
 			{
-				// TODO [BRMA07_1H] Highlord Omokk && Test: Highlord Omokk_BRMA07_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -293,9 +245,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA08_1", new CardDef(new Power
 			{
-				// TODO [BRMA08_1] General Drakkisath && Test: General Drakkisath_BRMA08_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -308,9 +257,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA08_1H", new CardDef(new Power
 			{
-				// TODO [BRMA08_1H] General Drakkisath && Test: General Drakkisath_BRMA08_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -323,9 +269,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_1", new CardDef(new Power
 			{
-				// TODO [BRMA09_1] Rend Blackhand && Test: Rend Blackhand_BRMA09_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -338,9 +281,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_1H", new CardDef(new Power
 			{
-				// TODO [BRMA09_1H] Rend Blackhand && Test: Rend Blackhand_BRMA09_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -353,9 +293,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA10_1", new CardDef(new Power
 			{
-				// TODO [BRMA10_1] Razorgore the Untamed && Test: Razorgore the Untamed_BRMA10_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -368,9 +305,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA10_1H", new CardDef(new Power
 			{
-				// TODO [BRMA10_1H] Razorgore the Untamed && Test: Razorgore the Untamed_BRMA10_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -383,9 +317,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA11_1", new CardDef(new Power
 			{
-				// TODO [BRMA11_1] Vaelastrasz the Corrupt && Test: Vaelastrasz the Corrupt_BRMA11_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -398,9 +329,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA11_1H", new CardDef(new Power
 			{
-				// TODO [BRMA11_1H] Vaelastrasz the Corrupt && Test: Vaelastrasz the Corrupt_BRMA11_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -413,9 +341,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_1", new CardDef(new Power
 			{
-				// TODO [BRMA12_1] Chromaggus && Test: Chromaggus_BRMA12_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -428,9 +353,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_1H", new CardDef(new Power
 			{
-				// TODO [BRMA12_1H] Chromaggus && Test: Chromaggus_BRMA12_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -442,9 +364,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_9", new CardDef(new Power
 			{
-				// TODO [BRMA12_9] Chromatic Dragonkin && Test: Chromatic Dragonkin_BRMA12_9
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -457,9 +376,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_1", new CardDef(new Power
 			{
-				// TODO [BRMA13_1] Lord Victor Nefarius && Test: Lord Victor Nefarius_BRMA13_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -472,9 +388,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_1H", new CardDef(new Power
 			{
-				// TODO [BRMA13_1H] Lord Victor Nefarius && Test: Lord Victor Nefarius_BRMA13_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -489,9 +402,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_3", new CardDef(new[] {"BRMA13_8","BRMA13_7","BRMA13_5","BRMA13_6"}, new Power
 			{
-				// TODO [BRMA13_3] Nefarian && Test: Nefarian_BRMA13_3
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -506,9 +416,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_3H", new CardDef(new[] {"BRMA13_8","BRMA13_7","BRMA13_6","BRMA13_5"}, new Power
 			{
-				// TODO [BRMA13_3H] Nefarian && Test: Nefarian_BRMA13_3H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -521,9 +428,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA14_1", new CardDef(new Power
 			{
-				// TODO [BRMA14_1] Omnotron Defense System && Test: Omnotron Defense System_BRMA14_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -536,9 +440,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA14_1H", new CardDef(new Power
 			{
-				// TODO [BRMA14_1H] Omnotron Defense System && Test: Omnotron Defense System_BRMA14_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -551,9 +452,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA15_1", new CardDef(new Power
 			{
-				// TODO [BRMA15_1] Maloriak && Test: Maloriak_BRMA15_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -566,9 +464,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA15_1H", new CardDef(new Power
 			{
-				// TODO [BRMA15_1H] Maloriak && Test: Maloriak_BRMA15_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -581,9 +476,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA16_1", new CardDef(new Power
 			{
-				// TODO [BRMA16_1] Atramedes && Test: Atramedes_BRMA16_1
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -596,9 +488,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA16_1H", new CardDef(new Power
 			{
-				// TODO [BRMA16_1H] Atramedes && Test: Atramedes_BRMA16_1H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -611,9 +500,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_2", new CardDef(new Power
 			{
-				// TODO [BRMA17_2] Nefarian && Test: Nefarian_BRMA17_2
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -626,9 +512,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_2H", new CardDef(new Power
 			{
-				// TODO [BRMA17_2H] Nefarian && Test: Nefarian_BRMA17_2H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -641,9 +524,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_3", new CardDef(new Power
 			{
-				// TODO [BRMA17_3] Onyxia && Test: Onyxia_BRMA17_3
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// ----------------------------------------- HERO - NEUTRAL
@@ -656,9 +536,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA17_3H", new CardDef(new Power
 			{
-				// TODO [BRMA17_3H] Onyxia && Test: Onyxia_BRMA17_3H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 		}
@@ -1875,9 +1752,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA01_3", new CardDef(new Power
 			{
-				// TODO [BRMA01_3] Dark Iron Bouncer && Test: Dark Iron Bouncer_BRMA01_3
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -1892,9 +1766,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA01_4t", new CardDef(new Power
 			{
-				// TODO [BRMA01_4t] Guzzler && Test: Guzzler_BRMA01_4t
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -1909,9 +1780,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA02_2t", new CardDef(new Power
 			{
-				// TODO [BRMA02_2t] Dark Iron Spectator && Test: Dark Iron Spectator_BRMA02_2t
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -1931,10 +1799,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA03_3", new CardDef(new Power
 			{
-				// TODO [BRMA03_3] Moira Bronzebeard && Test: Moira Bronzebeard_BRMA03_3
 				InfoCardId = "BRMA03_3e",
-				//PowerTask = null,
-				//Trigger = null,
+				Aura = new Aura(AuraType.OPPONENT, new Effect(GameTag.HERO_POWER_DISABLED, EffectOperator.SET, 1))
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -1954,9 +1820,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA03_3H", new CardDef(new Power
 			{
-				// TODO [BRMA03_3H] Moira Bronzebeard && Test: Moira Bronzebeard_BRMA03_3H
-				//PowerTask = null,
-				//Trigger = null,
+				Aura = new Aura(AuraType.OPPONENT, new Effect(GameTag.HERO_POWER_DISABLED, EffectOperator.SET, 1))
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2036,9 +1900,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA06_4", new CardDef(new Power
 			{
-				// TODO [BRMA06_4] Flamewaker Acolyte && Test: Flamewaker Acolyte_BRMA06_4
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2050,9 +1911,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA06_4H", new CardDef(new Power
 			{
-				// TODO [BRMA06_4H] Flamewaker Acolyte && Test: Flamewaker Acolyte_BRMA06_4H
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2064,9 +1922,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_2Ht", new CardDef(new Power
 			{
-				// TODO [BRMA09_2Ht] Whelp && Test: Whelp_BRMA09_2Ht
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2078,9 +1933,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_2t", new CardDef(new Power
 			{
-				// TODO [BRMA09_2t] Whelp && Test: Whelp_BRMA09_2t
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2095,9 +1947,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_3Ht", new CardDef(new Power
 			{
-				// TODO [BRMA09_3Ht] Old Horde Orc && Test: Old Horde Orc_BRMA09_3Ht
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2112,9 +1961,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_3t", new CardDef(new Power
 			{
-				// TODO [BRMA09_3t] Old Horde Orc && Test: Old Horde Orc_BRMA09_3t
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2126,9 +1972,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_4Ht", new CardDef(new Power
 			{
-				// TODO [BRMA09_4Ht] Dragonkin && Test: Dragonkin_BRMA09_4Ht
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2140,9 +1983,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_4t", new CardDef(new Power
 			{
-				// TODO [BRMA09_4t] Dragonkin && Test: Dragonkin_BRMA09_4t
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2155,9 +1995,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_5Ht", new CardDef(new Power
 			{
-				// TODO [BRMA09_5Ht] Gyth && Test: Gyth_BRMA09_5Ht
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2170,9 +2007,6 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA09_5t", new CardDef(new Power
 			{
-				// TODO [BRMA09_5t] Gyth && Test: Gyth_BRMA09_5t
-				//PowerTask = null,
-				//Trigger = null,
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
