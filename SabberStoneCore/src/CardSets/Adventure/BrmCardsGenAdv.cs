@@ -1665,8 +1665,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA03_3e", new CardDef(new Power
 			{
-				// TODO [BRMA03_3e] Moira's Presence && Test: Moira's Presence_BRMA03_3e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("BRMA03_3e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("BRMA03_3e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -2094,9 +2093,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA10_4", new CardDef(new Power
 			{
-				// TODO [BRMA10_4] Corrupted Egg && Test: Corrupted Egg_BRMA10_4
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_END)
+				{
+					EitherTurn = true,
+					Condition = SelfCondition.IsTagValue(GameTag.HEALTH, 4, RelaSign.GEQ),
+					SingleTask = new TransformTask("BRMA10_5", EntityType.SOURCE)
+				}
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2111,9 +2113,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA10_4H", new CardDef(new Power
 			{
-				// TODO [BRMA10_4H] Corrupted Egg && Test: Corrupted Egg_BRMA10_4H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_END)
+				{
+					EitherTurn = true,
+					Condition = SelfCondition.IsTagValue(GameTag.HEALTH, 5, RelaSign.GEQ),
+					SingleTask = new TransformTask("BRMA10_5H", EntityType.SOURCE)
+				}
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
