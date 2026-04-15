@@ -624,10 +624,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX13_02", new CardDef(new Power
 			{
-				// TODO [NAX13_02] Polarity Shift && Test: Polarity Shift_NAX13_02
 				InfoCardId = "NAX13_02e",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new SwapAttackHealthTask(EntityType.ALLMINIONS, "NAX13_02e")
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -643,9 +641,10 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX14_02", new CardDef(new Power
 			{
-				// TODO [NAX14_02] Frost Breath && Test: Frost Breath_NAX14_02
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new IncludeTask(EntityType.OP_MINIONS),
+					new FilterStackTask(SelfCondition.IsTagValue(GameTag.FROZEN, 0)),
+					new DestroyTask(EntityType.STACK))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -767,9 +766,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX2_03", new CardDef(new Power
 			{
-				// TODO [NAX2_03] Rain of Fire && Test: Rain of Fire_NAX2_03
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new CountTask(EntityType.OP_HAND),
+					new EnqueueNumberTask(ComplexTask.DamageRandomTargets(1, EntityType.ENEMIES, 1)))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -785,9 +784,9 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("NAX2_03H", new CardDef(new Power
 			{
-				// TODO [NAX2_03H] Rain of Fire && Test: Rain of Fire_NAX2_03H
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = ComplexTask.Create(
+					new CountTask(EntityType.OP_HAND),
+					new EnqueueNumberTask(ComplexTask.DamageRandomTargets(1, EntityType.ENEMIES, 1)))
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -1054,7 +1053,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			cards.Add("NAX11_04e", new CardDef(new Power
 			{
 				// TODO [NAX11_04e] Mutating Injection && Test: Mutating Injection_NAX11_04e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX11_04e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("NAX11_04e")
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
