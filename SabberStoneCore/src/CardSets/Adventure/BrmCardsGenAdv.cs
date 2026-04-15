@@ -27,6 +27,18 @@ namespace SabberStoneCore.CardSets.Adventure
 {
 	public class BrmCardsGenAdv
 	{
+		private static void CapManaCrystals(Controller controller, int cap)
+		{
+			if (controller == null)
+				return;
+
+			if (controller.BaseMana > cap)
+				controller.BaseMana = cap;
+
+			if (controller.UsedMana > controller.BaseMana)
+				controller.UsedMana = controller.BaseMana;
+		}
+
 		private static void Heroes(IDictionary<string, CardDef> cards)
 		{
 			// ----------------------------------------- HERO - NEUTRAL
@@ -910,9 +922,17 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA08_2", new CardDef(new Power
 			{
-				// TODO [BRMA08_2] Intense Gaze && Test: Intense Gaze_BRMA08_2
-				//PowerTask = null,
-				//Trigger = null,
+				Aura = new Aura(AuraType.HANDS, Effects.SetCost(1)),
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					EitherTurn = true,
+					SingleTask = new CustomTask((game, controller, source, target, stack) =>
+					{
+						Controller owner = ((IPlayable)source).Controller;
+						CapManaCrystals(owner, 1);
+						CapManaCrystals(owner.Opponent, 1);
+					})
+				}
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -928,9 +948,17 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA08_2H", new CardDef(new Power
 			{
-				// TODO [BRMA08_2H] Intense Gaze && Test: Intense Gaze_BRMA08_2H
-				//PowerTask = null,
-				//Trigger = null,
+				Aura = new Aura(AuraType.HANDS, Effects.SetCost(1)),
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					EitherTurn = true,
+					SingleTask = new CustomTask((game, controller, source, target, stack) =>
+					{
+						Controller owner = ((IPlayable)source).Controller;
+						CapManaCrystals(owner, 2);
+						CapManaCrystals(owner.Opponent, 1);
+					})
+				}
 			}));
 
 			// ----------------------------------- HERO_POWER - NEUTRAL
@@ -2212,9 +2240,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA14_3", new CardDef(new Power
 			{
-				// TODO [BRMA14_3] Arcanotron && Test: Arcanotron_BRMA14_3
-				//PowerTask = null,
-				//Trigger = null,
+				Aura = new Aura(AuraType.CONTROLLERS, new Effect(GameTag.SPELLPOWER, EffectOperator.ADD, 2))
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
