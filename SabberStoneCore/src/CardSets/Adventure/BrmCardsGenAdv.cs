@@ -1680,8 +1680,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA05_3e", new CardDef(new Power
 			{
-				// TODO [BRMA05_3e] Living Bomb && Test: Living Bomb_BRMA05_3e
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("BRMA05_3e")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("BRMA05_3e"),
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerSource = TriggerSource.FRIENDLY,
+					SingleTask = new DamageTask(5, EntityType.ENEMIES)
+				}
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -1695,8 +1699,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA05_3He", new CardDef(new Power
 			{
-				// TODO [BRMA05_3He] Living Bomb && Test: Living Bomb_BRMA05_3He
-				//Enchant = Enchants.Enchants.GetAutoEnchantFromText("BRMA05_3He")
+				Enchant = Enchants.Enchants.GetAutoEnchantFromText("BRMA05_3He"),
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerSource = TriggerSource.FRIENDLY,
+					SingleTask = new DamageTask(10, EntityType.ENEMIES)
+				}
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
@@ -2170,9 +2178,7 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA13_5", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_IF_AVAILABLE,0}}, new Power
 			{
-				// TODO [BRMA13_5] Son of the Flame && Test: Son of the Flame_BRMA13_5
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new DamageTask(6, EntityType.TARGET)
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -2494,10 +2500,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA05_3", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0},{PlayReq.REQ_ENEMY_TARGET,0},{PlayReq.REQ_MINION_TARGET,0}}, new Power
 			{
-				// TODO [BRMA05_3] Living Bomb && Test: Living Bomb_BRMA05_3
 				InfoCardId = "BRMA05_3e",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("BRMA05_3e", EntityType.TARGET)
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2516,10 +2520,8 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA05_3H", new CardDef(new Dictionary<PlayReq, int>() {{PlayReq.REQ_TARGET_TO_PLAY,0},{PlayReq.REQ_ENEMY_TARGET,0},{PlayReq.REQ_MINION_TARGET,0}}, new Power
 			{
-				// TODO [BRMA05_3H] Living Bomb && Test: Living Bomb_BRMA05_3H
 				InfoCardId = "BRMA05_3He",
-				//PowerTask = null,
-				//Trigger = null,
+				PowerTask = new AddEnchantmentTask("BRMA05_3He", EntityType.TARGET)
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2606,9 +2608,11 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_3", new CardDef(new Power
 			{
-				// TODO [BRMA12_3] Brood Affliction: Red && Test: Brood Affliction: Red_BRMA12_3
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					SingleTask = new DamageTask(1, EntityType.HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2624,9 +2628,11 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_3H", new CardDef(new Power
 			{
-				// TODO [BRMA12_3H] Brood Affliction: Red && Test: Brood Affliction: Red_BRMA12_3H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					SingleTask = new DamageTask(3, EntityType.HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2641,9 +2647,11 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_4", new CardDef(new Power
 			{
-				// TODO [BRMA12_4] Brood Affliction: Green && Test: Brood Affliction: Green_BRMA12_4
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					SingleTask = new HealTask(2, EntityType.OP_HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2658,9 +2666,11 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_4H", new CardDef(new Power
 			{
-				// TODO [BRMA12_4H] Brood Affliction: Green && Test: Brood Affliction: Green_BRMA12_4H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					SingleTask = new HealTask(6, EntityType.OP_HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2709,9 +2719,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_6", new CardDef(new Power
 			{
-				// TODO [BRMA12_6] Brood Affliction: Black && Test: Brood Affliction: Black_BRMA12_6
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.DRAW)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					TriggerSource = TriggerSource.ENEMY,
+					SingleTask = new CopyTask(EntityType.EVENT_SOURCE, Zone.HAND, toOpponent: true)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2726,9 +2739,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_6H", new CardDef(new Power
 			{
-				// TODO [BRMA12_6H] Brood Affliction: Black && Test: Brood Affliction: Black_BRMA12_6H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.DRAW)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					TriggerSource = TriggerSource.ENEMY,
+					SingleTask = new CopyTask(EntityType.EVENT_SOURCE, Zone.HAND, toOpponent: true)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
