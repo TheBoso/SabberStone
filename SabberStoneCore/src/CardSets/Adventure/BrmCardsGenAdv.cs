@@ -1971,9 +1971,26 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA04_3", new CardDef(new Power
 			{
-				// TODO [BRMA04_3] Firesworn && Test: Firesworn_BRMA04_3
-				//PowerTask = null,
-				//Trigger = null,
+				DeathrattleTask = ComplexTask.Create(
+					new FuncNumberTask(source =>
+					{
+						var controller = source.Controller;
+						int diedThisTurn = controller.NumFriendlyMinionsThatDiedThisTurn;
+						if (diedThisTurn <= 0)
+							return 0;
+
+						int friendlyFireswornDied = 0;
+						int checkedDeaths = 0;
+						for (int i = controller.GraveyardZone.Count - 1; i >= 0 && checkedDeaths < diedThisTurn; --i)
+						{
+							++checkedDeaths;
+							if (controller.GraveyardZone[i].Card.Id == "BRMA04_3")
+								++friendlyFireswornDied;
+						}
+
+						return friendlyFireswornDied;
+					}),
+					new DamageNumberTask(EntityType.OP_HERO))
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
@@ -1988,9 +2005,26 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA04_3H", new CardDef(new Power
 			{
-				// TODO [BRMA04_3H] Firesworn && Test: Firesworn_BRMA04_3H
-				//PowerTask = null,
-				//Trigger = null,
+				DeathrattleTask = ComplexTask.Create(
+					new FuncNumberTask(source =>
+					{
+						var controller = source.Controller;
+						int diedThisTurn = controller.NumFriendlyMinionsThatDiedThisTurn;
+						if (diedThisTurn <= 0)
+							return 0;
+
+						int friendlyFireswornDied = 0;
+						int checkedDeaths = 0;
+						for (int i = controller.GraveyardZone.Count - 1; i >= 0 && checkedDeaths < diedThisTurn; --i)
+						{
+							++checkedDeaths;
+							if (controller.GraveyardZone[i].Card.Id == "BRMA04_3H")
+								++friendlyFireswornDied;
+						}
+
+						return friendlyFireswornDied * 3;
+					}),
+					new DamageNumberTask(EntityType.OP_HERO))
 			}));
 
 			// --------------------------------------- MINION - NEUTRAL
