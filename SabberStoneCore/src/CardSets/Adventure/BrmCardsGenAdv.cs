@@ -1735,6 +1735,66 @@ namespace SabberStoneCore.CardSets.Adventure
 			}));
 
 			// ---------------------------------- ENCHANTMENT - NEUTRAL
+			// [BRMA12_5e] Brood Affliction: Blue (*) - COST:0
+			// - Set: brm,
+			// --------------------------------------------------------
+			// Text: Chromaggus' spells cost (1) less this turn.
+			// --------------------------------------------------------
+			cards.Add("BRMA12_5e", new CardDef(new Power
+			{
+				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(1))
+				{
+					Condition = SelfCondition.IsSpell,
+					RemoveTrigger = (TriggerType.TURN_END, null)
+				}
+			}));
+
+			// ---------------------------------- ENCHANTMENT - NEUTRAL
+			// [BRMA12_5He] Brood Affliction: Blue (*) - COST:0
+			// - Set: brm,
+			// --------------------------------------------------------
+			// Text: Chromaggus' spells cost (3) less this turn.
+			// --------------------------------------------------------
+			cards.Add("BRMA12_5He", new CardDef(new Power
+			{
+				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(3))
+				{
+					Condition = SelfCondition.IsSpell,
+					RemoveTrigger = (TriggerType.TURN_END, null)
+				}
+			}));
+
+			// ---------------------------------- ENCHANTMENT - NEUTRAL
+			// [BRMA12_7e] Brood Affliction: Bronze (*) - COST:0
+			// - Set: brm,
+			// --------------------------------------------------------
+			// Text: Chromaggus' minions cost (1) less this turn.
+			// --------------------------------------------------------
+			cards.Add("BRMA12_7e", new CardDef(new Power
+			{
+				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(1))
+				{
+					Condition = SelfCondition.IsMinion,
+					RemoveTrigger = (TriggerType.TURN_END, null)
+				}
+			}));
+
+			// ---------------------------------- ENCHANTMENT - NEUTRAL
+			// [BRMA12_7He] Brood Affliction: Bronze (*) - COST:0
+			// - Set: brm,
+			// --------------------------------------------------------
+			// Text: Chromaggus' minions cost (3) less this turn.
+			// --------------------------------------------------------
+			cards.Add("BRMA12_7He", new CardDef(new Power
+			{
+				Aura = new Aura(AuraType.HAND, Effects.ReduceCost(3))
+				{
+					Condition = SelfCondition.IsMinion,
+					RemoveTrigger = (TriggerType.TURN_END, null)
+				}
+			}));
+
+			// ---------------------------------- ENCHANTMENT - NEUTRAL
 			// [BRMA12_8te] Draconic Lineage (*) - COST:0
 			// - Set: brm,
 			// --------------------------------------------------------
@@ -2663,9 +2723,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_5", new CardDef(new Power
 			{
-				// TODO [BRMA12_5] Brood Affliction: Blue && Test: Brood Affliction: Blue_BRMA12_5
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					TriggerSource = TriggerSource.ENEMY,
+					SingleTask = new AddEnchantmentTask("BRMA12_5e", EntityType.OP_HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2680,9 +2743,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_5H", new CardDef(new Power
 			{
-				// TODO [BRMA12_5H] Brood Affliction: Blue && Test: Brood Affliction: Blue_BRMA12_5H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					TriggerSource = TriggerSource.ENEMY,
+					SingleTask = new AddEnchantmentTask("BRMA12_5He", EntityType.OP_HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2737,9 +2803,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_7", new CardDef(new Power
 			{
-				// TODO [BRMA12_7] Brood Affliction: Bronze && Test: Brood Affliction: Bronze_BRMA12_7
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					TriggerSource = TriggerSource.ENEMY,
+					SingleTask = new AddEnchantmentTask("BRMA12_7e", EntityType.OP_HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
@@ -2754,9 +2823,12 @@ namespace SabberStoneCore.CardSets.Adventure
 			// --------------------------------------------------------
 			cards.Add("BRMA12_7H", new CardDef(new Power
 			{
-				// TODO [BRMA12_7H] Brood Affliction: Bronze && Test: Brood Affliction: Bronze_BRMA12_7H
-				//PowerTask = null,
-				//Trigger = null,
+				Trigger = new Trigger(TriggerType.TURN_START)
+				{
+					TriggerActivation = TriggerActivation.HAND,
+					TriggerSource = TriggerSource.ENEMY,
+					SingleTask = new AddEnchantmentTask("BRMA12_7He", EntityType.OP_HERO)
+				}
 			}));
 
 			// ---------------------------------------- SPELL - NEUTRAL
