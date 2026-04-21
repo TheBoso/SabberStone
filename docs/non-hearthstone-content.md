@@ -41,6 +41,20 @@ CardContent.Configure(new CardContentDefinition(
 	}));
 ```
 
+There is also a tiny built-in sample content pack now:
+
+```csharp
+CardContent.Configure(SampleCardContent.Create());
+```
+
+It contains:
+
+- 2 heroes
+- 2 hero powers
+- 2 vanilla minions
+- 1 targeted spell implemented in C#
+- 1 draw minion implemented in C#
+
 ## Good next steps
 
 - Move Hearthstone-only helpers from `SabberStoneCore.Model.Cards` into the Hearthstone preset.

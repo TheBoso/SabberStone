@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CardDefs build="1">
+	<Entity CardID="HERO_08" ID="900001" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Arcanist Prime</enUS>
+		</Tag>
+		<Tag enumID="45" name="HEALTH" type="Int" value="30"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="4"/>
+		<Tag enumID="201" name="FACTION" type="Int" value="3"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="3"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="2"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+		<Tag cardID="NSH_P01" enumID="380" name="HERO_POWER" type="Card" value="900101"/>
+	</Entity>
+	<Entity CardID="HERO_01" ID="900002" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Iron Vanguard</enUS>
+		</Tag>
+		<Tag enumID="45" name="HEALTH" type="Int" value="30"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="10"/>
+		<Tag enumID="201" name="FACTION" type="Int" value="3"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="3"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="2"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+		<Tag cardID="NSH_P02" enumID="380" name="HERO_POWER" type="Card" value="900102"/>
+	</Entity>
+	<Entity CardID="NSH_P01" ID="900101" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Arc Spark</enUS>
+		</Tag>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>&lt;b&gt;Hero Power&lt;/b&gt;
+Deal $1 damage.</enUS>
+		</Tag>
+		<Tag enumID="48" name="COST" type="Int" value="2"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="4"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="10"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="2"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+		<PlayRequirement reqID="11" param="0"/>
+	</Entity>
+	<Entity CardID="NSH_P02" ID="900102" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Brace</enUS>
+		</Tag>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>&lt;b&gt;Hero Power&lt;/b&gt;
+Gain 2 Armor.</enUS>
+		</Tag>
+		<Tag enumID="48" name="COST" type="Int" value="2"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="10"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="10"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="2"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+	</Entity>
+	<Entity CardID="NSH_001" ID="900201" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Lane Scout</enUS>
+		</Tag>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>A simple sample minion.</enUS>
+		</Tag>
+		<Tag enumID="47" name="ATK" type="Int" value="1"/>
+		<Tag enumID="45" name="HEALTH" type="Int" value="2"/>
+		<Tag enumID="48" name="COST" type="Int" value="1"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="12"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="4"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="1"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+	</Entity>
+	<Entity CardID="NSH_002" ID="900202" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Bulwark Guard</enUS>
+		</Tag>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>&lt;b&gt;Taunt&lt;/b&gt;</enUS>
+		</Tag>
+		<Tag enumID="47" name="ATK" type="Int" value="2"/>
+		<Tag enumID="45" name="HEALTH" type="Int" value="4"/>
+		<Tag enumID="48" name="COST" type="Int" value="3"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>&lt;b&gt;Taunt&lt;/b&gt;</enUS>
+		</Tag>
+		<Tag enumID="190" name="TAUNT" type="Int" value="1"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="12"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="4"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="1"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+	</Entity>
+	<Entity CardID="NSH_003" ID="900203" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Practice Bolt</enUS>
+		</Tag>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>Deal $3 damage.</enUS>
+		</Tag>
+		<Tag enumID="48" name="COST" type="Int" value="2"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="4"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="5"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="1"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+		<PlayRequirement reqID="11" param="0"/>
+	</Entity>
+	<Entity CardID="NSH_004" ID="900204" version="1">
+		<Tag enumID="185" name="CARDNAME" type="LocString">
+			<enUS>Field Engineer</enUS>
+		</Tag>
+		<Tag enumID="184" name="CARDTEXT" type="LocString">
+			<enUS>&lt;b&gt;Battlecry:&lt;/b&gt; Draw a card.</enUS>
+		</Tag>
+		<Tag enumID="47" name="ATK" type="Int" value="2"/>
+		<Tag enumID="45" name="HEALTH" type="Int" value="3"/>
+		<Tag enumID="48" name="COST" type="Int" value="2"/>
+		<Tag enumID="183" name="CARD_SET" type="Int" value="2"/>
+		<Tag enumID="199" name="CLASS" type="Int" value="12"/>
+		<Tag enumID="202" name="CARDTYPE" type="Int" value="4"/>
+		<Tag enumID="203" name="RARITY" type="Int" value="2"/>
+		<Tag enumID="321" name="COLLECTIBLE" type="Int" value="1"/>
+	</Entity>
+</CardDefs>
