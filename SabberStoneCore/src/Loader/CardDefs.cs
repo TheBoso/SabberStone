@@ -56,12 +56,12 @@ namespace SabberStoneCore.src.Loader
 			CoreCardsGen.AddAll(_cardDefsDic);
 			Expert1CardsGen.AddAll(_cardDefsDic);
 
-			GilneasCardsGen.AddAll(_cardDefsDic);
-			BoomsdayCardsGen.AddAll(_cardDefsDic);
-			TrollCardsGen.AddAll(_cardDefsDic);
-			DalaranCardsGen.AddAll(_cardDefsDic);
-			UldumCardsGen.AddAll(_cardDefsDic);
-			DragonsCardsGen.AddAll(_cardDefsDic);
+		//	GilneasCardsGen.AddAll(_cardDefsDic);
+		//	BoomsdayCardsGen.AddAll(_cardDefsDic);
+		//	TrollCardsGen.AddAll(_cardDefsDic);
+		//	DalaranCardsGen.AddAll(_cardDefsDic);
+		//	UldumCardsGen.AddAll(_cardDefsDic);
+		//	DragonsCardsGen.AddAll(_cardDefsDic);
 
 			// Rest
 			NaxxCardsGen.AddAll(_cardDefsDic);
@@ -69,14 +69,14 @@ namespace SabberStoneCore.src.Loader
 			BrmCardsGen.AddAll(_cardDefsDic);
 			TgtCardsGen.AddAll(_cardDefsDic);
 			LoeCardsGen.AddAll(_cardDefsDic);
-			GangsCardsGen.AddAll(_cardDefsDic);
-			KaraCardsGen.AddAll(_cardDefsDic);
-			OgCardsGen.AddAll(_cardDefsDic);
-			UngoroCardsGen.AddAll(_cardDefsDic);
-			IcecrownCardsGen.AddAll(_cardDefsDic);
-			LootapaloozaCardsGen.AddAll(_cardDefsDic);
+		//	GangsCardsGen.AddAll(_cardDefsDic);
+		//	KaraCardsGen.AddAll(_cardDefsDic);
+		//	OgCardsGen.AddAll(_cardDefsDic);
+		//	UngoroCardsGen.AddAll(_cardDefsDic);
+		//	IcecrownCardsGen.AddAll(_cardDefsDic);
+		//	LootapaloozaCardsGen.AddAll(_cardDefsDic);
 
-			HofCardsGen.AddAll(_cardDefsDic);
+		//	HofCardsGen.AddAll(_cardDefsDic);
 
 			// Tavern Brawl
 			//TbCardsGen.AddAll(_powerDic);
