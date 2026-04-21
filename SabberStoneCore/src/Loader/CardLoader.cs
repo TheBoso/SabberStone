@@ -29,12 +29,21 @@ namespace SabberStoneCore.Loader
 	internal class CardLoader : ICardLoader
 	{
 		private static Assembly Assembly => typeof(CardLoader).GetTypeInfo().Assembly;
+		private readonly string _cardXmlResourceName;
+
+		internal CardLoader(string cardXmlResourceName)
+		{
+			_cardXmlResourceName = cardXmlResourceName;
+		}
 
 		public Card[] Load()
 		{
 			// Get XML definitions from assembly embedded resource
-			var cardDefsXml =
-				XDocument.Load(Assembly.GetManifestResourceStream("SabberStoneCore.Resources.CardDefs.xml"));
+			var resourceStream = Assembly.GetManifestResourceStream(_cardXmlResourceName);
+			if (resourceStream == null)
+				throw new InvalidOperationException($"Embedded card definition resource '{_cardXmlResourceName}' was not found.");
+
+			var cardDefsXml = XDocument.Load(resourceStream);
 			//var cardDefsXml = XDocument.Load(@"C:\Users\admin\Source\Repos\SabberStone\SabberStoneCore\Loader\Data\CardDefs.xml");
 			//var cardXml = XDocument.Load(Assembly.GetManifestResourceStream("SabberStoneCore.Loader.Data.CARD.xml"));
 			// Parse XML

@@ -102,9 +102,12 @@ namespace SabberStoneCore.Model
 
 		static Cards()
 		{
+			CardContentDefinition content = CardContent.Current;
+
 			// Fetch all cards.
-			var cardLoader = new CardLoader();
+			var cardLoader = new CardLoader(content.CardXmlResourceName);
 			Card[] cards = cardLoader.Load();
+			var cardDefinitions = new SabberStoneCore.src.Loader.CardDefs(content.CardDefinitionRegistrars).Get;
 
 			//string json = File.ReadAllText(CardLoader.Path + @"SabberStone\HSProtoSim\Loader\Data\cardData.json");
 			//string json = File.ReadAllText(Environment.CurrentDirectory + @"\cardData.json");
@@ -113,7 +116,8 @@ namespace SabberStoneCore.Model
 			// Set as card definitions
 
 			Data = new CardContainer();
-			Data.Load(cards);
+			Data.Load(cards, cardDefinitions);
+			content.PostLoadAction?.Invoke(Data.Cards);
 
 			//Log.Debug("Standard:");
 			//Enum.GetValues(typeof(CardClass)).Cast<CardClass>().ToList().ForEach(heroClass =>
@@ -158,10 +162,6 @@ namespace SabberStoneCore.Model
 			StandardCostMinionCards = AllStandard.Where(c => c.Type == CardType.MINION).GroupBy(c => c.Cost).ToDictionary(g => g.Key, g => g.ToList());
 			WildCostMinionCards = AllWild.Where(c => c.Type == CardType.MINION).GroupBy(c => c.Cost).ToDictionary(g => g.Key, g => g.ToList());
 
-			// Temporary fix for Lotus Assassin
-			Data.Cards["CFM_634"].Stealth = true;
-			Data.Cards["CFM_634"].Tags.Add(GameTag.STEALTH, 1);
-
 			// Basic Totems
 			BasicTotems = new[]
 			{
@@ -171,8 +171,6 @@ namespace SabberStoneCore.Model
 				FromId("CS2_052")	// Wraith of Air Totem
 			};
 
-			// filtered out cards ... cosmetic purpose
-			Data.Cards.Remove("HERO_01c"); // HERO Deathwing
 		}
 
 		#endregion
